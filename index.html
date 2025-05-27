@@ -15,6 +15,12 @@
 
   gtag('config', 'G-6ZEXC5HXZ4');
 </script>
+	  <!-- Swiper CSS -->
+<link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"
+/>
+
 
 
     <meta charset="utf-8" />
@@ -49,6 +55,28 @@
       allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
       allowfullscreen>
     </iframe>
+  </div>
+</section>
+<!-- Slider Section -->
+<section class="slider-section">
+  <div class="swiper mySwiper">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide">
+        <img src="images/car1.webp" alt="Car Model 1" loading="lazy" />
+      </div>
+      <div class="swiper-slide">
+        <img src="images/car2.webp" alt="Car Model 2" loading="lazy" />
+      </div>
+      <div class="swiper-slide">
+        <img src="images/car3.webp" alt="Car Model 3" loading="lazy" />
+      </div>
+      <!-- add more slides as needed -->
+    </div>
+    <!-- pagination bullets -->
+    <div class="swiper-pagination"></div>
+    <!-- navigation arrows -->
+    <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div>
   </div>
 </section>
 
@@ -520,7 +548,26 @@ print 'Sorted in ' + i + ' iterations.';</code></pre>
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
-		 
+		 <!-- Swiper JS -->
+<script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+<script>
+  const swiper = new Swiper('.mySwiper', {
+    loop: true,
+    autoplay: {
+      delay: 3000,
+      disableOnInteraction: false,
+    },
+    pagination: {
+      el: '.swiper-pagination',
+      clickable: true,
+    },
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+  });
+</script>
+
  
 	</body>
 </html>
