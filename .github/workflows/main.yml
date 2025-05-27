@@ -1,0 +1,20 @@
+name: Minify Website
+
+on:
+  push:
+    branches: [main]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v3
+    - name: Minify HTML/CSS/JS
+      uses: nizarmah/auto-minify@v2
+    - name: Commit changes
+      run: |
+        git config --global user.name "github-actions"
+        git config --global user.email "github-actions@github.com"
+        git add .
+        git commit -m "Minify assets" || echo "No changes to commit"
+        git push
