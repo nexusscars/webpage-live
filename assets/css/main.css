@@ -3974,15 +3974,38 @@ input, select, textarea {
   max-width: 1200px;
   margin: 2rem auto;
 }
+
 .swiper {
   width: 100%;
   height: 400px;
 }
+
+/* Adjust image sizing */
 .swiper-slide img {
   display: block;
   width: 100%;
   height: 100%;
   object-fit: cover;
+  border-radius: 8px; /* optional for nicer look */
+}
+
+/* Mobile responsive adjustments */
+@media (max-width: 768px) {
+  .swiper {
+    height: 220px; /* Reduced height for mobile */
+  }
+
+  .swiper-slide img {
+    object-fit: cover;
+  }
+}
+
+@media (max-width: 480px) {
+  .swiper {
+    height: 180px;
+  }
+}
+
 }
 
 
