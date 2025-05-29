@@ -223,3 +223,111 @@ footer {
   /* For example, display images in a row or reposition elements */
   /* (Use of Flexbox and Grid simplifies these tasks:contentReference[oaicite:4]{index=4}:contentReference[oaicite:5]{index=5}) */
 }
+/* Primary Color Update for Automotive Feel */
+:root {
+  --primary-color: #0077c8;   /* Strong blue, common car brand accent */
+  --secondary-color: #e94e1b; /* Bold red for price or CTA highlights */
+}
+
+/* Hero Banner for featured cars */
+.hero-banner {
+  background: url('../images/hero-car.webp') center/cover no-repeat;
+  height: 60vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  text-shadow: 0 0 8px rgba(0,0,0,0.7);
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 2rem;
+}
+
+/* Vehicle Listing Cards */
+.vehicle-listings {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  margin-bottom: 3rem;
+}
+.vehicle-card {
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  overflow: hidden;
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+.vehicle-card:hover {
+  transform: translateY(-5px);
+}
+.vehicle-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+.vehicle-card .card-content {
+  padding: 1rem;
+}
+.vehicle-card .title {
+  font-weight: 600;
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+  color: var(--primary-color);
+}
+.vehicle-card .price {
+  color: var(--secondary-color);
+  font-weight: 700;
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+}
+.vehicle-card .details {
+  font-size: 0.9rem;
+  color: #666;
+}
+
+/* Call to Action Buttons */
+.cta-button {
+  background-color: var(--secondary-color);
+  color: #fff;
+  padding: 0.8rem 1.6rem;
+  border-radius: 5px;
+  font-weight: bold;
+  text-align: center;
+  display: inline-block;
+  margin-top: 1rem;
+  transition: background-color 0.3s ease;
+  text-decoration: none;
+}
+.cta-button:hover {
+  background-color: #c2370f;
+}
+
+/* Testimonials Section */
+.testimonials {
+  background-color: #f5f7fa;
+  padding: 2rem 1rem;
+  border-radius: 8px;
+  margin-bottom: 3rem;
+}
+.testimonials blockquote {
+  font-style: italic;
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+}
+.testimonials cite {
+  font-weight: 700;
+  color: var(--primary-color);
+}
+
+/* Responsive tweaks for smaller devices */
+@media (max-width: 767px) {
+  .hero-banner {
+    font-size: 1.6rem;
+    height: 40vh;
+  }
+  .vehicle-card img {
+    height: 140px;
+  }
+}
+
