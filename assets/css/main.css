@@ -4010,6 +4010,12 @@ input, select, textarea {
   display: block;
   margin: 0 auto; /* optional: center align */
 }
+.image-wrapper {
+  width: 100%;
+  max-width: 100%;
+  padding: 0 1rem;
+  box-sizing: border-box;
+}
 
 }
 
