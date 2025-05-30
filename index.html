@@ -373,82 +373,218 @@
     }
   }
 </style>
-								</div>
-							
-  <!-- Your existing footer here -->
-  <footer>
-    <p>&copy; 2025 Nexusscars. All rights reserved.</p>
-  </footer>
+<footer class="nexus-footer">
+  <div class="footer-container">
+    <div class="footer-column contact-info">
+      <div class="contact-card">
+        <div class="contact-icon">
+          <i class="fas fa-envelope"></i>
+        </div>
+        <div>
+          <h3>Email</h3>
+          <a href="mailto:nexusscars@gmail.com" class="contact-link">nexusscars@gmail.com</a>
+        </div>
+      </div>
 
-</body>
-</html>
-				</tbody>
-											 
+      <div class="contact-card">
+        <div class="contact-icon">
+          <i class="fas fa-phone-alt"></i>
+        </div>
+        <div>
+          <h3>Phone</h3>
+          <a href="tel:+8109032175927" class="contact-link">(+81) 090-3217-5927</a>
+        </div>
+      </div>
 
-							<section>
-								<header>
-									<h3>Buttons</h3>
-								</header>
-								<div class="content">
-									<ul class="actions">
-										<li><a href="#" class="button primary">Primary</a></li>
-										<li><a href="#" class="button">Default</a></li>
-									</ul>
-									<ul class="actions">
-										<li><a href="#" class="button large">Large</a></li>
-										<li><a href="#" class="button">Default</a></li>
-										<li><a href="#" class="button small">Small</a></li>
-									</ul>
-									<ul class="actions">
-										<li><a href="#" class="button primary icon solid fa-download">Icon</a></li>
-										<li><a href="#" class="button icon solid fa-download">Icon</a></li>
-									</ul>
-									<ul class="actions">
-										<li><span class="button primary disabled">Disabled</span></li>
-										<li><span class="button disabled">Disabled</span></li>
-									</ul>
-								</div>
-							</section>
-						
+      <div class="contact-card">
+        <div class="contact-icon">
+          <i class="fas fa-map-marker-alt"></i>
+        </div>
+        <div>
+          <h3>Headquarters</h3>
+          <address>1930 Oii, Kashiwa City<br>Chiba Prefecture, Japan 277-0902</address>
+        </div>
+      </div>
+    </div>
 
+    <div class="footer-column social-links">
+      <h3>Connect With Us</h3>
+      <div class="social-icons">
+        <a href="https://www.facebook.com/NexusscarsJapan/" class="social-icon" target="_blank" aria-label="Facebook">
+          <i class="fab fa-facebook-f"></i>
+        </a>
+        <a href="https://www.instagram.com/nexusscars/?hl=en" class="social-icon" target="_blank" aria-label="Instagram">
+          <i class="fab fa-instagram"></i>
+        </a>
+        <a href="#" class="social-icon" target="_blank" aria-label="Twitter">
+          <i class="fab fa-twitter"></i>
+        </a>
+        <a href="#" class="social-icon" target="_blank" aria-label="LinkedIn">
+          <i class="fab fa-linkedin-in"></i>
+        </a>
+        <a href="#" class="social-icon" target="_blank" aria-label="YouTube">
+          <i class="fab fa-youtube"></i>
+        </a>
+      </div>
+      
+      <div class="business-hours">
+        <h3>Business Hours</h3>
+        <p>Monday - Friday: 9:00 - 18:00 JST<br>
+        Saturday: 10:00 - 15:00 JST</p>
+      </div>
+    </div>
+  </div>
+  
+  <div class="footer-bottom">
+    <p>&copy; 2023 NexusCars Japan. All Rights Reserved. | <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a></p>
+  </div>
+</footer>
 
-						  </div>
-						</section>
-
-						</div>
-						<footer>
-							<ul class="items">
-								<li>
-									<h3>Email</h3>
-									<a href="#">nexusscars@gmail.com</a>
-								</li>
-								<li>
-									<h3>Phone</h3>
-									<a href="#">(+81) 090 3217 5927</a>
-								</li>
-								<li>
-									<h3>Address</h3>
-									<span>(H.O)1930 Oii, Kashiwa city, Chiba Pref. Japan 277-0902</span>
-								</li>
-								<li>
-									<h3>Elsewhere</h3>
-									<ul class="icons">
-										<li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
-										<li><a href="https://www.facebook.com/NexusscarsJapan/#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
-										<li><a href="https://www.instagram.com/nexusscars/?hl=en" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
-										<li><a href="#" class="icon brands fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
-										<li><a href="#" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
-										<li><a href="#" class="icon brands fa-codepen"><span class="label">Codepen</span></a></li>
-									</ul>
-								</li>
-							</ul>
-						</footer>
-					</section>
-
-				<!-- Copyright -->
-					<div class="copyright">&copy; Nexuss Int'l Co.,Ltd.(Y.K)'. All rights reserved. Design: <a href="https://html5up.net">HTML5 UP</a>.</div>
-
-			</div>
+<style>
+  /* Base Styles */
+  .nexus-footer {
+    background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+    color: #ffffff;
+    padding: 40px 0 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    border-top: 4px solid #e60000;
+  }
+  
+  .footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 0 20px;
+  }
+  
+  .footer-column {
+    flex: 1;
+    min-width: 250px;
+    margin-bottom: 30px;
+    padding: 0 15px;
+  }
+  
+  /* Contact Info Section */
+  .contact-card {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 25px;
+  }
+  
+  .contact-icon {
+    background: #e60000;
+    color: white;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 15px;
+    flex-shrink: 0;
+  }
+  
+  .contact-card h3 {
+    color: #e60000;
+    margin: 0 0 5px 0;
+    font-size: 1.1rem;
+  }
+  
+  .contact-link {
+    color: #cccccc;
+    text-decoration: none;
+    transition: color 0.3s;
+  }
+  
+  .contact-link:hover {
+    color: #ffffff;
+    text-decoration: underline;
+  }
+  
+  address {
+    font-style: normal;
+    line-height: 1.5;
+    color: #cccccc;
+  }
+  
+  /* Social Links Section */
+  .social-links h3 {
+    color: #e60000;
+    margin-bottom: 20px;
+    font-size: 1.3rem;
+  }
+  
+  .social-icons {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 30px;
+  }
+  
+  .social-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background: rgba(255,255,255,0.1);
+    border-radius: 50%;
+    color: white;
+    transition: all 0.3s;
+  }
+  
+  .social-icon:hover {
+    background: #e60000;
+    transform: translateY(-3px);
+  }
+  
+  .business-hours h3 {
+    color: #e60000;
+    margin-bottom: 10px;
+    font-size: 1.1rem;
+  }
+  
+  .business-hours p {
+    color: #cccccc;
+    line-height: 1.5;
+  }
+  
+  /* Footer Bottom */
+  .footer-bottom {
+    background: #000000;
+    padding: 15px 0;
+    text-align: center;
+    margin-top: 30px;
+  }
+  
+  .footer-bottom p {
+    margin: 0;
+    color: #999999;
+    font-size: 0.9rem;
+  }
+  
+  .footer-bottom a {
+    color: #cccccc;
+    text-decoration: none;
+  }
+  
+  .footer-bottom a:hover {
+    color: #e60000;
+    text-decoration: underline;
+  }
+  
+  /* Responsive */
+  @media (max-width: 768px) {
+    .footer-column {
+      flex: 100%;
+    }
+    
+    .social-icons {
+      justify-content: center;
+    }
+  }
+</style>								 
 
 		<!-- Scripts -->
 			<script src="assets/js/jquery.min.js"></script>
