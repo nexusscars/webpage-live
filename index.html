@@ -263,55 +263,133 @@
 											</tfoot>
 										</table>
 									</div>
-
-									<h4>Deposit Requirements: Buyers must pay a refundable deposit (e.g., ¥100,000–¥500,000 or 10–20% of bid price) before bidding</h4>
-									<div class="table-wrapper">
-										<table class="alt">
-											<thead>
-												<tr>
-													<th>Name</th>
-													<th>Description</th>
-													<th>Price</th>
-												</tr>
-											</thead>
-											<tbody>
-												<tr>
-													<td>Auction/Agency Direct</td>
-													<td>Africa Region - Toyota RAV4 Hybrid.</td>
-													<td>$1,000 (Calculated on FOB)</td>
-												</tr>
-												<tr>
-													<td>Auction/Agency Direct</td>
-													<td>EU Region - Lexus NX</td>
-													<td>€1,000 Calculated on FOB)</td>
-												</tr>
-															
-										<tr>
-													<td>Auction/Agency Direct</td>
-													<td> Oceania Region - Toyota Aqua, Subaru Forester.</td>
-													<td>NZ$1,000(Calculated on FOB)</td>
-												</tr>
-												<tr>
-													<td>Auction/Agency Direct</td>
-													<td>Asia Region - Suzuki Hustler, Honda Vezel</td>
-													<td>$1,000(Calculated on FOB)</td>
-												</tr>
-												<tr>
-													<td>Auction/Agency Direct</td>
-													<td>South & North America Region - Hilux.</td>
-													<td>$1,000(Calculated on FOB)</td>
-												</tr>
-											</tbody>
-											<tfoot>
+<tfoot>
 												<tr>
 													<td colspan="2"></td>
-													<td>FREE Quote</td>
+													<td>DETAILS</td>
 												</tr>
 											</tfoot>
 										</table>
 									</div>
+ <div class="export-pricing">
+  <h4>Deposit Requirements: Buyers must pay a refundable deposit (e.g., ¥100,000–¥500,000 or 10–20% of bid price) before bidding</h4>
+  <div class="table-wrapper">
+    <table class="export-table">
+      <thead>
+        <tr>
+          <th>Service Type</th>
+          <th>Region & Vehicles</th>
+          <th>Fee</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Auction/Agency Direct</td>
+          <td>Africa Region - Toyota RAV4 Hybrid</td>
+          <td>$1,000 (FOB Calculated)</td>
+        </tr>
+        <tr>
+          <td>Auction/Agency Direct</td>
+          <td>EU Region - Lexus NX</td>
+          <td>€1,000 (FOB Calculated)</td>
+        </tr>
+        <tr>
+          <td>Auction/Agency Direct</td>
+          <td>Oceania Region - Toyota Aqua, Subaru Forester</td>
+          <td>NZ$1,000 (FOB Calculated)</td>
+        </tr>
+        <tr>
+          <td>Auction/Agency Direct</td>
+          <td>Asia Region - Suzuki Hustler, Honda Vezel</td>
+          <td>$1,000 (FOB Calculated)</td>
+        </tr>
+        <tr>
+          <td>Auction/Agency Direct</td>
+          <td>Americas Region - Toyota Hilux</td>
+          <td>$1,000 (FOB Calculated)</td>
+        </tr>
+      </tbody>
+      <tfoot>
+        <tr>
+          <td colspan="2" class="footnote">All prices exclude shipping & customs</td>
+          <td class="highlight-cell">FREE Quote</td>
+        </tr>
+      </tfoot>
+    </table>
+  </div>
+</div>
+
+<style>
+  .export-pricing {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    max-width: 1000px;
+    margin: 2rem auto;
+  }
+
+  .export-table {
+    width: 100%;
+    border-collapse: collapse;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    overflow: hidden;
+    border-radius: 8px;
+  }
+
+  .export-table th {
+    background-color: #e60000; /* Japanese red */
+    color: white;
+    padding: 12px 15px;
+    text-align: left;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 0.85rem;
+  }
+
+  .export-table td {
+    padding: 12px 15px;
+    border-bottom: 1px solid #f0f0f0;
+    vertical-align: top;
+  }
+
+  .export-table tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+  }
+
+  .export-table tbody tr:hover {
+    background-color: #fff4f4;
+  }
+
+  .export-table tfoot td {
+    padding: 12px 15px;
+    font-weight: 500;
+  }
+
+  .footnote {
+    color: #666;
+    font-size: 0.85rem;
+  }
+
+  .highlight-cell {
+    background-color: #e60000;
+    color: white;
+    font-weight: bold;
+    text-align: center;
+  }
+
+  /* Currency highlighting */
+  .export-table td:nth-child(3) {
+    color: #006600;
+    font-weight: 500;
+  }
+
+  @media (max-width: 768px) {
+    .export-table {
+      display: block;
+      overflow-x: auto;
+    }
+  }
+</style>
 								</div>
-							</section>
+							
   <!-- Your existing footer here -->
   <footer>
     <p>&copy; 2025 Nexusscars. All rights reserved.</p>
