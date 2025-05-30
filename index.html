@@ -56,36 +56,44 @@
 <body>
 
   <!-- Your existing header/navigation here -->
- <header class="site-header">
+<header class="site-header">
   <div class="container">
     <div class="header-content">
-      <!-- Logo with Tagline -->
+      <!-- Logo (Same as mobile) -->
       <div class="branding">
         <a href="index.html" class="logo">
           <span class="logo-main">NexusCars</span>
-          <span class="logo-tagline">Japanese Auto Experts</span>
+          <span class="logo-tagline">Premium Japanese Auto Exports</span>
         </a>
       </div>
 
-      <!-- Main Navigation -->
-      <nav class="primary-nav">
-        <ul class="nav-list">
-          <li><a href="#inventory"><i class="fas fa-car"></i> Inventory</a></li>
-          <li><a href="#auctions"><i class="fas fa-gavel"></i> Auctions</a></li>
-          <li><a href="#services"><i class="fas fa-ship"></i> Shipping</a></li>
-          <li><a href="#about"><i class="fas fa-info-circle"></i> About</a></li>
-          <li class="highlight"><a href="#contact"><i class="fas fa-phone-alt"></i> Contact</a></li>
+      <!-- Desktop Navigation -->
+      <nav class="primary-nav desktop-nav">
+        <ul class="actions">
+          <li><a href="#inventory" class="nav-link"><i class="fas fa-car"></i> Inventory</a></li>
+          <li><a href="#auctions" class="nav-link"><i class="fas fa-gavel"></i> Auctions</a></li>
+          <li><a href="#services" class="nav-link"><i class="fas fa-ship"></i> Shipping</a></li>
+          <li><a href="#about" class="nav-link"><i class="fas fa-info-circle"></i> About</a></li>
+          <li class="highlight"><a href="#contact" class="button"><i class="fas fa-phone-alt"></i> Contact</a></li>
         </ul>
+        
+        <!-- Phone CTA (Desktop only) -->
+        <div class="header-cta">
+          <a href="tel:+8109032175927" class="phone-link">
+            <i class="fas fa-phone"></i>
+            <span>(+81) 090-3217-5927</span>
+          </a>
+        </div>
       </nav>
 
-      <!-- Mobile Menu Toggle -->
+      <!-- Mobile Toggle (Hidden on desktop) -->
       <button class="mobile-menu-toggle" aria-label="Menu">
         <i class="fas fa-bars"></i>
       </button>
     </div>
   </div>
 </header>
-  
+      
 
   <!-- Hero Banner -->
   <section class="hero-banner" style="background: url('/images/hero-car.webp') center/cover no-repeat; height: 60vh; display: flex; justify-content: center; align-items: center; color: white;">
