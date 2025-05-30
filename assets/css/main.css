@@ -451,5 +451,45 @@ footer {
 @media (min-width: 769px) {
   .desktop-only { display: inline; }
 }
+/* Mobile Menu Behavior */
+.mobile-menu-toggle { display: none; }
+
+@media (max-width: 768px) {
+  .mobile-menu-toggle {
+    display: block;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1.5rem;
+  }
+  .header-cta.desktop-only { display: none; }
+  .primary-nav {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 80%;
+    height: 100vh;
+    background: #1a1a1a;
+    transition: right 0.3s;
+    padding: 2rem;
+  }
+  .primary-nav.active { right: 0; }
+  .nav-list { flex-direction: column; }
 }
+
+/* Phone Link Styling */
+.phone-link {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: white;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  background: rgba(230, 0, 0, 0.2);
+  transition: background 0.3s;
+}
+.phone-link:hover {
+  background: var(--secondary-color);
+}}
 
