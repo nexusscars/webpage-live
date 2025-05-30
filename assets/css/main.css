@@ -447,6 +447,9 @@ footer {
   .mobile-menu-toggle {
     display: block;
   }
+.desktop-only { display: none; }
+@media (min-width: 769px) {
+  .desktop-only { display: inline; }
 }
 }
 
