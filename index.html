@@ -56,18 +56,36 @@
 <body>
 
   <!-- Your existing header/navigation here -->
-  <header>
-    <div class="container">
-      <h1><a href="index.html">Nexusscars</a></h1>
-      <nav>
-        <ul class="actions">
-          <li><a href="#inventory">Inventory</a></li>
-          <li><a href="#about">About Us</a></li>
-          <li><a href="#contact">Contact</a></li>
+ <header class="site-header">
+  <div class="container">
+    <div class="header-content">
+      <!-- Logo with Tagline -->
+      <div class="branding">
+        <a href="index.html" class="logo">
+          <span class="logo-main">NexusCars</span>
+          <span class="logo-tagline">Japanese Auto Experts</span>
+        </a>
+      </div>
+
+      <!-- Main Navigation -->
+      <nav class="primary-nav">
+        <ul class="nav-list">
+          <li><a href="#inventory"><i class="fas fa-car"></i> Inventory</a></li>
+          <li><a href="#auctions"><i class="fas fa-gavel"></i> Auctions</a></li>
+          <li><a href="#services"><i class="fas fa-ship"></i> Shipping</a></li>
+          <li><a href="#about"><i class="fas fa-info-circle"></i> About</a></li>
+          <li class="highlight"><a href="#contact"><i class="fas fa-phone-alt"></i> Contact</a></li>
         </ul>
       </nav>
+
+      <!-- Mobile Menu Toggle -->
+      <button class="mobile-menu-toggle" aria-label="Menu">
+        <i class="fas fa-bars"></i>
+      </button>
     </div>
-  </header>
+  </div>
+</header>
+  
 
   <!-- Hero Banner -->
   <section class="hero-banner" style="background: url('/images/hero-car.webp') center/cover no-repeat; height: 60vh; display: flex; justify-content: center; align-items: center; color: white;">
@@ -613,7 +631,11 @@
     },
   });
 </script>
-
+<script>
+  document.querySelector('.mobile-menu-toggle').addEventListener('click', function() {
+    document.querySelector('.primary-nav').classList.toggle('active');
+  });
+</script>
  
 	</body>
 </html>
