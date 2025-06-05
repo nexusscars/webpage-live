@@ -104,18 +104,18 @@
   <h2 class="section-title">Sneak Peeks of Upcoming Cars</h2>
 
   <!-- Vehicle 1 -->
-  <div class="vehicle-card">
-    <div class="image-gallery">
-      <img src="images/KUBOTA-KX-014-1.webp" alt="Kubota Shovel" onerror="this.src='images/placeholder.webp'; this.alt='SP Coming Soon';">
-      <img src="images/Toyota-Lexus-Coupe-2.webp" alt="Toyota Lexus Coupe" onerror="this.src='images/placeholder.webp'; this.alt='SP Coming Soon';">
-      <img src="images/Toyota-Lexus-Coupe-3.webp" alt="Toyota Lexus Coupe" onerror="this.src='images/placeholder.webp'; this.alt='SP Coming Soon';">
-      <img src="images/Toyota-Lexus-Coupe-4.webp" alt="Toyota Lexus Coupe" onerror="this.src='images/placeholder.webp'; this.alt='SP Coming Soon';">
-      <img src="images/Toyota-Lexus-Coupe-5.webp" alt="Toyota Lexus Coupe" onerror="this.src='images/placeholder.webp'; this.alt='SP Coming Soon';">
+        <a href="images/KUBOTA-KX-014-1.webp" data-lightbox="kubota-set" data-title="Kubota Shovel">
+        <img src="images/KUBOTA-KX-014-1.webp" alt="Kubota Shovel" onerror="this.src='images/placeholder.webp'; this.alt='Coming Soon';">
+      </a>
+      <a href="images/Toyota-Lexus-Coupe-2.webp" data-lightbox="kubota-set" data-title="Toyota Lexus Coupe">
+        <img src="images/Toyota-Lexus-Coupe-2.webp" alt="Toyota Lexus Coupe" onerror="this.src='images/placeholder.webp'; this.alt='SP Coming Soon';">
+      </a>
+      <!-- Repeat for other images with same data-lightbox value -->
     </div>
     <div class="card-content">
       <h3 class="title">Kubota Shovel Caterpillar</h3>
       <p class="subheading">
- Model: KX-014 &nbsp;|&nbsp; Engine: Diesel &nbsp;|&nbsp; Km: 1,500H &nbsp;|&nbsp; Grade: Used &nbsp;|&nbsp; FOB: $12,000 (Suggested)
+        Model: KX-014 | Engine: Diesel | Km: 1,500H | Grade: Used | FOB: $12,000 (Suggested)
       </p>
       <a href="#" class="cta-button">View Details</a>
     </div>
@@ -193,7 +193,11 @@
     </div>
   </div>
 </section>
-
+<!-- Lightbox CSS & JS -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js">
+	
+</script>
   <!-- About Us Section -->
   <section id="about" class="container two-column">
     <div class="text">
