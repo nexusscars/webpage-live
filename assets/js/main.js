@@ -206,3 +206,24 @@
 					});
 
 })(jQuery);
+// Lightbox fallback for older browsers
+function initLightboxFallback() {
+    const lightboxLinks = document.querySelectorAll('[data-lightbox]');
+    
+    lightboxLinks.forEach(link => {
+        link.addEventListener('click', function(e) {
+            e.preventDefault();
+            // Your custom lightbox implementation here
+            console.log('Lightbox would open for:', this.href);
+        });
+    });
+}
+
+// Initialize when jQuery is ready
+if (window.jQuery) {
+    jQuery(document).ready(function($) {
+        // Lightbox will auto-initialize if properly loaded
+    });
+} else {
+    document.addEventListener('DOMContentLoaded', initLightboxFallback);
+}
