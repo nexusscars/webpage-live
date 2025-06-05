@@ -14,5 +14,20 @@ document.addEventListener('DOMContentLoaded', function() {
             const lightbox = document.getElementById('lightbox');
             if (lightbox) lightbox.style.display = 'none';
         }
+        // Initialize with error handling
+if (typeof lightbox !== 'undefined') {
+  lightbox.option({
+    'resizeDuration': 200,
+    'wrapAround': true,
+    'alwaysShowNavOnTouchDevices': true,
+    'onError': function(err) {
+      console.error('Lightbox error:', err);
+      // Fallback: Open image in new tab
+      window.open(this.$element[0].href, '_blank');
+    }
+  });
+} else {
+  console.error('Lightbox2 not loaded! Check script order.');
+}
     });
 });
