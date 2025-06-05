@@ -550,6 +550,76 @@ footer {
   .chatbot-container {
     padding: 10px;
   }
+  .section-title {
+  font-size: 1.8rem;
+  margin-bottom: 1.5rem;
+  color: #333;
+  text-align: center;
 }
+
+.vehicle-card {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  overflow: hidden;
+  margin-bottom: 2rem;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+  background-color: #fff;
+}
+
+.image-gallery {
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+}
+
+.image-gallery img {
+  width: 20%;
+  height: auto;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+  scroll-snap-align: start;
+  cursor: zoom-in;
+}
+
+.image-gallery img:hover {
+  transform: scale(1.1);
+}
+
+.card-content {
+  padding: 1rem;
+  text-align: center;
+}
+
+.card-content .title {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #222;
+}
+
+.card-content .subheading {
+  font-size: 0.95rem;
+  color: #555;
+  margin: 0.5rem 0;
+  line-height: 1.6;
+}
+
+.cta-button {
+  display: inline-block;
+  margin-top: 0.75rem;
+  padding: 0.5rem 1.2rem;
+  background-color: #2c3e50;
+  color: #fff;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+  background-color: #1a242f;
+}
+
 }
 
