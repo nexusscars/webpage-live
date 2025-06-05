@@ -620,6 +620,53 @@ footer {
 .cta-button:hover {
   background-color: #1a242f;
 }
+/* Lightbox customization */
+.image-gallery {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 15px;
+}
 
+.image-gallery a {
+  display: block;
+  width: calc(20% - 8px); /* 5 images per row */
+  transition: transform 0.3s;
+}
+
+.image-gallery a:hover {
+  transform: scale(1.03);
+}
+
+.image-gallery img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  object-fit: cover;
+  aspect-ratio: 4/3;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .image-gallery a {
+    width: calc(33.33% - 7px); /* 3 images per row on mobile */
+  }
+}
+
+@media (max-width: 480px) {
+  .image-gallery a {
+    width: calc(50% - 5px); /* 2 images per row on small screens */
+  }
+  <script>
+  lightbox.option({
+    'resizeDuration': 200,
+    'wrapAround': true,
+    'alwaysShowNavOnTouchDevices': true,
+    'albumLabel': 'Image %1 of %2',
+    'fadeDuration': 300,
+    'imageFadeDuration': 300
+  });
+</script>
+}
 }
 
