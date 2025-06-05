@@ -690,5 +690,16 @@ footer {
   z-index: 10000;
   cursor: pointer;
 }
+    /* Force visible close button */
+.lb-close {
+    opacity: 1 !important;
+    display: block !important;
+    position: fixed !important;
+    top: 20px !important;
+    right: 20px !important;
+    color: white !important;
+    font-size: 30px !important;
+    z-index: 999999 !important;
+}
 }
 
