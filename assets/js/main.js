@@ -84,7 +84,6 @@ document.addEventListener('DOMContentLoaded', () => {
 chrome.runtime.sendMessage({...}, (response) => {
   if (chrome.runtime.lastError) {
     console.warn('Extension error:', chrome.runtime.lastError);
-  }
-});
+  });
 })(jQuery);
 
