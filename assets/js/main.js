@@ -81,7 +81,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const tabs = new Tabs({
     defaultTab: 0 // Force first tab as active
   });
-chrome.runtime.sendMessage({...}, (response) => {
+	{chrome.runtime.sendMessage({...}, (response) => {
   if (chrome.runtime.lastError) {
     console.warn('Extension error:', chrome.runtime.lastError);
   });
