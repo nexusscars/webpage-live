@@ -1,4 +1,4 @@
-  <!DOCTYPE html>
+    <!DOCTYPE html>
 <html lang="en">
   <head>
     <!-- Primary Meta Tags -->
@@ -46,7 +46,7 @@
         "@type": "PostalAddress",
         "addressCountry": "Japan"
       }
-	 
+	   
     }
     </script>
   </head>
@@ -129,13 +129,84 @@
     </div>
   </div>
 </section>
-
-<!-- Modal -->
-<div id="imageModal" class="modal" onclick="closeModal()">
+ <!-- Modal Viewer -->
+<div id="modal" class="modal" onclick="closeModal()">
   <span class="close">&times;</span>
-  <img class="modal-content" id="modalImage">
+  <img class="modal-content" id="modal-img">
+  <div id="caption"></div>
 </div>
 
+<style>
+  .gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1rem;
+  }
+  .car-card {
+    text-align: center;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  }
+  .car-card img {
+    width: 100%;
+    height: auto;
+    cursor: zoom-in;
+    transition: transform 0.3s ease;
+  }
+  .car-card img:hover {
+    transform: scale(1.05);
+  }
+  .modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    padding-top: 60px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.9);
+  }
+  .modal-content {
+    margin: auto;
+    display: block;
+    max-width: 90%;
+    max-height: 80%;
+  }
+  .close {
+    position: absolute;
+    top: 20px;
+    right: 35px;
+    color: #fff;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  #caption {
+    margin: auto;
+    text-align: center;
+    color: #ccc;
+    padding: 10px 0;
+  }
+</style>
+
+<script>
+  function openModal(imgElement) {
+    var modal = document.getElementById("modal");
+    var modalImg = document.getElementById("modal-img");
+    var captionText = document.getElementById("caption");
+    modal.style.display = "block";
+    modalImg.src = imgElement.src;
+    captionText.innerHTML = imgElement.alt;
+  }
+
+  function closeModal() {
+    document.getElementById("modal").style.display = "none";
+  }
+</script>
  
   <!-- About Us Section -->
   <section id="about" class="container two-column">
@@ -407,8 +478,23 @@
       display: block;
       overflow-x: auto;
     }
-  }
-</style>
+ <!-- Vehicle Sources Section -->
+ <section class="vehicle-sources container">
+  <h2 class="section-title">Vehicle Sourcing Platforms</h2>
+  <p class="sources-intro">We source quality Japanese used cars from reputable listing platforms and auction houses: USS, CAA, TAA, ARAI and JU.</p>
+  <div class="source-grid">
+    <a href="https://www.carsensor.net/" target="_blank" rel="noopener noreferrer" class="source-button">
+      CarSensor Japan
+    </a>
+    <a href="https://www.goo-net-exchange.com/" target="_blank" rel="noopener noreferrer" class="source-button">
+      Goo-Net Exchange
+    </a>
+    <a href="https://auc.japanstart.ru/aj_neo?classic" target="_blank" rel="noopener noreferrer" class="source-button">
+      Japan Live Auction (Demo)
+    </a>
+  </div>
+</section>
+
 <footer class="nexus-footer">
   <div class="footer-container">
     <div class="footer-column contact-info">
@@ -661,111 +747,14 @@
     document.querySelector('.primary-nav').classList.toggle('active');
   });
 </script>
-<!-- Before closing </body> -->
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+	<!-- Before closing </body> --> 
 <script src="js/main.js"></script>
-
- 
+<div id="modal" class="modal" onclick="closeModal()">
+  <span class="close">&times;</span>
+  <img class="modal-content" id="modal-img" alt="">
+  <div id="caption"></div>
+</div>
+	 
 </body> <!-- This is the closing body tag -->
 	</body>
-</html>
-
-  }
-  <!-- Sneak Peeks of Upcoming Cars -->
-  <section id="inventory" class="car-gallery container">
-    <h2 class="section-title">Sneak Peeks of Upcoming Cars</h2>
-    <div class="gallery-grid">
-      <div class="car-card">
-        <img src="assets/gallery/Pajero_Long_V98W.webp" alt="Mitsubishi Pajero 2012">
-        <p>Mitsubishi Pajero 2012 – V98W - 150,000 km – 3.2L Diesel</p>
-      </div>
-      <div class="car-card">
-        <img src="assets/gallery/Delica_Spacegear_PE8W.webp" alt="Delica Spacegear 2007">
-        <p>Delica Spacegear 2007 – 230,000 km – PE8W - 2.8L Diesel</p>
-      </div>
-      <div class="car-card">
-        <img src="assets/gallery/Nissan_UD_Truck.webp" alt="Nissan UD Hirabody">
-        <p>Nissan UD 2015 – 42,000 km – PK39L - 7.0L Diesel</p>
-      </div>
-      <div class="car-card">
-        <img src="assets/gallery/Fiat_LHD_Camper.webp" alt="Fiat Hymer Camper">
-        <p>Fiat Hymer Swing 524 - 2001 LHD – 120,000 km – 2.8L Diesel</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- Vehicle Sources Section -->
-  <section class="vehicle-sources container">
-    <h2 class="section-title">Vehicle Sourcing Platforms</h2>
-    <p class="sources-intro">We source quality Japanese used cars from reputable listing platforms and auction houses USS, CAA, TAA, ARAI and JU.</p>
-    <div class="source-grid">
-      <a href="https://www.carsensor.net/" target="_blank" rel="noopener noreferrer" class="source-card">
-        <span>CarSensor Japan</span>
-      </a>
-      <a href="https://www.goo-net-exchange.com/" target="_blank" rel="noopener noreferrer" class="source-card">
-        <span>Goo-Net Exchange</span>
-      </a>
-      <a href="https://auc.japanstart.ru/aj_neo?classic" target="_blank" rel="noopener noreferrer" class="source-card">
-        <span>Japan Live Auction-Demo</span>
-      </a>
-    </div>
-  </section>
-
-  <!-- Footer -->
-  <footer class="nexus-footer">
-    <div class="footer-container">
-      <div class="footer-column contact-info">
-        <div class="contact-card">
-          <div class="contact-icon">
-            <i class="fas fa-envelope"></i>
-          </div>
-          <div>
-            <h3>Email</h3>
-            <a href="mailto:nexusscars@gmail.com" class="contact-link">nexusscars@gmail.com</a>
-          </div>
-        </div>
-        <div class="contact-card">
-          <div class="contact-icon">
-            <i class="fas fa-phone-alt"></i>
-          </div>
-          <div>
-            <h3>Phone</h3>
-            <a href="tel:+8109032175927" class="contact-link">(+81) 090-3217-5927</a>
-          </div>
-        </div>
-        <div class="contact-card">
-          <div class="contact-icon">
-            <i class="fas fa-map-marker-alt"></i>
-          </div>
-          <div>
-            <h3>Headquarters</h3>
-            <address>1930 Oii, Kashiwa City<br>Chiba Prefecture, Japan 277-0902</address>
-          </div>
-        </div>
-      </div>
-      <div class="footer-column social-links">
-        <h3>Connect With Us</h3>
-        <div class="social-icons">
-          <a href="https://www.facebook.com/NexusscarsJapan/" class="social-icon" target="_blank"><i class="fab fa-facebook-f"></i></a>
-          <a href="https://www.instagram.com/nexusscars/" class="social-icon" target="_blank"><i class="fab fa-instagram"></i></a>
-          <a href="#" class="social-icon" target="_blank"><i class="fab fa-twitter"></i></a>
-          <a href="https://wa.me/819032175927?text=Hello%20NexusCars,%20I%20saw%20your%20website%20and..." class="social-icon"><i class="fab fa-whatsapp"></i></a>
-          <a href="https://www.youtube.com/channel/UCyK84pssGZccKaHI4n92U1g" class="social-icon" target="_blank"><i class="fab fa-youtube"></i></a>
-        </div>
-        <div class="business-hours">
-          <h3>Business Hours</h3>
-          <p>Monday - Friday: 9:00 - 18:00 JST<br>Saturday: 10:00 - 15:00 JST</p>
-        </div>
-      </div>
-    </div>
-    <div class="footer-bottom">
-      <p>&copy; 2025 NexusCars Japan. All Rights Reserved. | <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a></p>
-    </div>
-  </footer>
-
-  <!-- Scripts -->
-  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-  <script src="js/main.js"></script>
-</body>
-
 </html>
