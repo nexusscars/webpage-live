@@ -741,14 +741,14 @@
     document.querySelector('.primary-nav').classList.toggle('active');
   });
 </script>
-	<!-- Before closing </body> -->
-<script src="js/vendor/jquery.min.js"></script>
-<script src="js/lightbox/lightbox.min.js"></script>
-<script src="js/lightbox/lightbox-init.js"></script>
+	<!-- Before closing </body> --> 
 <script src="js/main.js"></script>
-	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-<link href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css" rel="stylesheet">
-<script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js"></script><!-- Your existing main.js -->
+<div id="modal" class="modal" onclick="closeModal()">
+  <span class="close">&times;</span>
+  <img class="modal-content" id="modal-img" alt="">
+  <div id="caption"></div>
+</div>
+	 
 </body> <!-- This is the closing body tag -->
 	</body>
 </html>
