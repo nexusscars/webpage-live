@@ -76,6 +76,11 @@
 			}
 		}
 	});
-
+// Initialize tabs with default active tab
+document.addEventListener('DOMContentLoaded', () => {
+  const tabs = new Tabs({
+    defaultTab: 0 // Force first tab as active
+  });
+});
 })(jQuery);
 
