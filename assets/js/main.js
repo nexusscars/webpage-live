@@ -227,3 +227,15 @@ if (window.jQuery) {
 } else {
     document.addEventListener('DOMContentLoaded', initLightboxFallback);
 }
+function openModal(imgElement) {
+  var modal = document.getElementById("modal");
+  var modalImg = document.getElementById("modal-img");
+  var captionText = document.getElementById("caption");
+  modal.style.display = "block";
+  modalImg.src = imgElement.src;
+  captionText.innerHTML = imgElement.alt;
+}
+
+function closeModal() {
+  document.getElementById("modal").style.display = "none";
+}
