@@ -99,6 +99,19 @@ function debounce(fn, delay) {
       closeModal();
     }
   });
+// Initialize viewport units
+function initViewportUnits() {
+  document.documentElement.style.setProperty(
+    '--vh', 
+    `${window.innerHeight * 0.01}px`
+  );
+  document.documentElement.style.setProperty(
+    '--scrollbar-width', 
+    `${window.innerWidth - document.documentElement.clientWidth}px`
+  );
+}
 
+window.addEventListener('load', initViewportUnits);
+window.addEventListener('resize', initViewportUnits);
 })(jQuery);
 
