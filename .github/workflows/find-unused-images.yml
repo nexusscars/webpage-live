@@ -1,0 +1,20 @@
+name: Find Unused Images
+
+on:
+  workflow_dispatch:  # Manual run
+
+jobs:
+  check-unused:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v3
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18
+
+      - name: Run Unused Image Detector
+        run: |
+          node .github/scripts/find-unused-images.js
