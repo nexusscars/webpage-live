@@ -138,27 +138,84 @@
     </div>
   </div>
 </section>
+ <!-- Modal Viewer -->
+<div id="modal" class="modal" onclick="closeModal()">
+  <span class="close">&times;</span>
+  <img class="modal-content" id="modal-img">
+  <div id="caption"></div>
+</div>
 
-  </div>
+<style>
+  .gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1rem;
+  }
+  .car-card {
+    text-align: center;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  }
+  .car-card img {
+    width: 100%;
+    height: auto;
+    cursor: zoom-in;
+    transition: transform 0.3s ease;
+  }
+  .car-card img:hover {
+    transform: scale(1.05);
+  }
+  .modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    padding-top: 60px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.9);
+  }
+  .modal-content {
+    margin: auto;
+    display: block;
+    max-width: 90%;
+    max-height: 80%;
+  }
+  .close {
+    position: absolute;
+    top: 20px;
+    right: 35px;
+    color: #fff;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  #caption {
+    margin: auto;
+    text-align: center;
+    color: #ccc;
+    padding: 10px 0;
+  }
+</style>
 
-  <!-- Vehicle 5 -->
-  <div class="vehicle-card">
-    <div class="image-gallery">
-      <img src="images/Subaru-Impreza-1.webp" alt="Subaru Impreza WRX" onerror="this.src='images/placeholder.webp'; this.alt='SP Coming Soon';">
-      <img src="images/Subaru-Impreza-2.webp" alt="Subaru Impreza WRX" onerror="this.src='images/placeholder.webp'; this.alt='SP Coming Soon';">
-      <img src="images/Subaru-Impreza-3.webp" alt="Subaru Impreza WRX" onerror="this.src='images/placeholder.webp'; this.alt='SP Coming Soon';">
-      <img src="images/Subaru-Impreza-4.webp" alt="Subaru Impreza WRX" onerror="this.src='images/placeholder.webp'; this.alt='SP Coming Soon';">
-      <img src="images/Subaru-Impreza-5.webp" alt="Subaru Impreza WRX" onerror="this.src='images/placeholder.webp'; this.alt='SP Coming Soon';">
-    </div>
-    <div class="card-content">
-      <h3 class="title">Subaru Impreza WRX STI</h3>
-      <p class="subheading">
-        Year: 2016 &nbsp;|&nbsp; Engine: 2.5L Boxer Turbo &nbsp;|&nbsp; Km: 61,000 &nbsp;|&nbsp; Grade: 4.5 &nbsp;|&nbsp; FOB: $25,400
-      </p>
-      <a href="#" class="cta-button">View Details</a>
-    </div>
-  </div>
-</section>
+<script>
+  function openModal(imgElement) {
+    var modal = document.getElementById("modal");
+    var modalImg = document.getElementById("modal-img");
+    var captionText = document.getElementById("caption");
+    modal.style.display = "block";
+    modalImg.src = imgElement.src;
+    captionText.innerHTML = imgElement.alt;
+  }
+
+  function closeModal() {
+    document.getElementById("modal").style.display = "none";
+  }
+</script>
  
   <!-- About Us Section -->
   <section id="about" class="container two-column">
