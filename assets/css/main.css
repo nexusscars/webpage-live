@@ -90,7 +90,21 @@ img {
   height: 3px;
   background-color: var(--primary);
 }
-
+@media (max-width: 736px) {
+  .primary-nav {
+    position: fixed;
+    top: 80px;
+    left: 0;
+    width: 100%;
+    background: white;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    transform: translateY(-150%);
+    transition: transform 0.3s ease;
+  }
+  .primary-nav.active {
+    transform: translateY(0);
+  }
+}
 .btn {
   display: inline-block;
   padding: 0.8rem 1.8rem;
@@ -772,5 +786,17 @@ body, iframe {
 iframe {
   font-family: -apple-system, BlinkMacSystemFont, sans-serif !important;
 }
-
+ @font-face {
+  font-family: 'Inter';
+  src: url('../webfonts/Inter-Regular.woff2') format('woff2');
+  font-weight: 400;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Inter';
+  src: url('../webfonts/Inter-Bold.woff2') format('woff2');
+  font-weight: 700;
+  font-display: swap;
+}
+  
  
