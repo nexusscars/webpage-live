@@ -1,4 +1,14 @@
- /* ====== BASE STYLES ====== */
+/* ===== PERFORMANCE OPTIMIZATION ===== */
+:root {
+  /* Viewport units with JS fallback */
+  --scrollbar-width: 0px;
+  --vh: 1vh; /* Will be updated by JS */
+  
+  /* Optional: Add these if not present */
+  --header-height: 80px;
+  --mobile-breakpoint: 736px;
+}
+/* ====== BASE STYLES ====== */
 :root {
   --primary: #e60000; /* Japanese red */
   --primary-dark: #b30000;
