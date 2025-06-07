@@ -243,48 +243,7 @@ footer {
   margin-bottom: 2rem;
 }
 
-/* Vehicle Listing Cards */
-.vehicle-listings {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 2rem;
-  margin-bottom: 3rem;
-}
-.vehicle-card {
-  background: #fff;
-  border-radius: 8px;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-  overflow: hidden;
-  transition: transform 0.3s ease;
-  cursor: pointer;
-}
-.vehicle-card:hover {
-  transform: translateY(-5px);
-}
-.vehicle-card img {
-  width: 100%;
-  height: 180px;
-  object-fit: cover;
-}
-.vehicle-card .card-content {
-  padding: 1rem;
-}
-.vehicle-card .title {
-  font-weight: 600;
-  font-size: 1.2rem;
-  margin-bottom: 0.5rem;
-  color: var(--primary-color);
-}
-.vehicle-card .price {
-  color: var(--secondary-color);
-  font-weight: 700;
-  font-size: 1.1rem;
-  margin-bottom: 0.5rem;
-}
-.vehicle-card .details {
-  font-size: 0.9rem;
-  color: #666;
-}
+ 
 
 /* Call to Action Buttons */
 .cta-button {
@@ -326,9 +285,7 @@ footer {
     font-size: 1.6rem;
     height: 40vh;
   }
-  .vehicle-card img {
-    height: 140px;
-  }
+  
   /* ======================
    HEADER STYLES 
    ====================== */
@@ -557,128 +514,7 @@ footer {
   text-align: center;
 }
 
-.vehicle-card {
-  display: flex;
-  flex-direction: column;
-  border: 1px solid #ddd;
-  border-radius: 12px;
-  overflow: hidden;
-  margin-bottom: 2rem;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
-  background-color: #fff;
-}
-
-.image-gallery {
-  display: flex;
-  flex-wrap: nowrap;
-  overflow-x: auto;
-  scroll-snap-type: x mandatory;
-}
-
-.image-gallery img {
-  width: 20%;
-  height: auto;
-  object-fit: cover;
-  transition: transform 0.3s ease;
-  scroll-snap-align: start;
-  cursor: zoom-in;
-}
-
-.image-gallery img:hover {
-  transform: scale(1.1);
-}
-
-.card-content {
-  padding: 1rem;
-  text-align: center;
-}
-
-.card-content .title {
-  font-size: 1.2rem;
-  font-weight: bold;
-  color: #222;
-}
-
-.card-content .subheading {
-  font-size: 0.95rem;
-  color: #555;
-  margin: 0.5rem 0;
-  line-height: 1.6;
-}
-
-.cta-button {
-  display: inline-block;
-  margin-top: 0.75rem;
-  padding: 0.5rem 1.2rem;
-  background-color: #2c3e50;
-  color: #fff;
-  border-radius: 8px;
-  text-decoration: none;
-  transition: background-color 0.3s ease;
-}
-
-.cta-button:hover {
-  background-color: #1a242f;
-}
-/* Lightbox customization */
-.image-gallery {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-  margin-bottom: 15px;
-}
-
-.image-gallery a {
-  display: block;
-  width: calc(20% - 8px); /* 5 images per row */
-  transition: transform 0.3s;
-}
-
-.image-gallery a:hover {
-  transform: scale(1.03);
-}
-
-.image-gallery img {
-  width: 100%;
-  height: auto;
-  border-radius: 8px;
-  object-fit: cover;
-  aspect-ratio: 4/3;
-}
-
-/* Responsive adjustments */
-@media (max-width: 768px) {
-  .image-gallery a {
-    width: calc(33.33% - 7px); /* 3 images per row on mobile */
-  }
-}
-
-@media (max-width: 480px) {
-  .image-gallery a {
-    width: calc(50% - 5px); /* 2 images per row on small screens */
-  }
-  <script>
-  lightbox.option({
-    'resizeDuration': 200,
-    'wrapAround': true,
-    'alwaysShowNavOnTouchDevices': true,
-    'albumLabel': 'Image %1 of %2',
-    'fadeDuration': 300,
-    'imageFadeDuration': 300
-  });
-</script>
-}
-  /* Ensure overlay is clickable */
-.lb-overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 9999;
-  width: 100vw;
-  height: 100vh;
-  cursor: pointer;
-}
-
+ 
 /* Close button styling */
 .lb-close {
   position: absolute;
