@@ -36,7 +36,30 @@
       }
     }
   });
+// VIEWPORT UNIT FIX (for mobile browsers)
+function setViewportUnits() {
+  document.documentElement.style.setProperty(
+    '--vh', 
+    `${window.innerHeight * 0.01}px`
+  );
+  document.documentElement.style.setProperty(
+    '--scrollbar-width', 
+    `${window.innerWidth - document.documentElement.clientWidth}px`
+  );
+}
 
+// Initialize and update on resize
+window.addEventListener('load', setViewportUnits);
+window.addEventListener('resize', debounce(setViewportUnits, 100));
+
+// Optional: Debounce helper (add if not present)
+function debounce(fn, delay) {
+  let timer;
+  return () => {
+    clearTimeout(timer);
+    timer = setTimeout(fn, delay);
+  };
+}
   // Modal functionality
   window.openModal = function(imgElement) {
     var modal = document.getElementById("modal");
