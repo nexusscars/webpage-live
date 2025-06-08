@@ -203,14 +203,28 @@ h2:after {
   z-index: 1;
   transition: transform 0.5s ease;
 }
-
+ 
 .hero-content {
-  position: relative;
-  z-index: 2;
   opacity: 0;
-  transform: translateY(30px);
-  transition: all 0.8s ease;
-  padding: 0 20px;
+  transform: translateY(20px);
+  transition: all 0.8s cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+
+.hero-banner.loaded .hero-content,
+.hero-banner.active .hero-content {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.hero-image {
+  transform: scale(1.1);
+  transition: transform 8s cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+
+.hero-banner.loaded .hero-image,
+.hero-banner.active .hero-image {
+  transform: scale(1);
+ 
 }
 
 .hero-banner:hover .hero-content {
