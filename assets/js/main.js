@@ -128,4 +128,61 @@ document.addEventListener('DOMContentLoaded', function() {
       }, 6000);
     });
   }
+  // main.js - Complete Merged Version
+(function() {
+  // DOM Ready Handler
+  document.addEventListener('DOMContentLoaded', init);
+  
+  function init() {
+    initHeroBanner();
+    initMobileMenu();
+    initImageModals();
+    // Add other initialization functions here
+  }
+  
+  function initHeroBanner() {
+    const hero = document.querySelector('.hero-banner');
+    if (!hero) return;
+    
+    // Initial load animation
+    setTimeout(() => hero.classList.add('loaded'), 300);
+    
+    // Scroll-triggered animation
+    new IntersectionObserver(([entry]) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('active');
+      }
+    }, { threshold: 0.1 }).observe(hero);
+  }
+  
+  function initMobileMenu() {
+    document.querySelector('.mobile-menu-toggle')?.addEventListener('click', function() {
+      document.querySelector('.primary-nav')?.classList.toggle('active');
+    });
+  }
+  
+  function initImageModals() {
+    const modal = document.getElementById("modal");
+    if (!modal) return;
+    
+    function openModal(img) {
+      document.getElementById("modal-img").src = img.src;
+      document.getElementById("caption").textContent = img.alt;
+      modal.style.display = "block";
+    }
+    
+    function closeModal() {
+      modal.style.display = "none";
+    }
+    
+    // Event Delegation for better performance
+    document.querySelector('.car-gallery')?.addEventListener('click', (e) => {
+      if (e.target.tagName === 'IMG') {
+        openModal(e.target);
+      }
+    });
+    
+    modal.addEventListener('click', closeModal);
+  }
+})();
 });
