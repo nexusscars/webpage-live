@@ -447,7 +447,44 @@ h2:after {
   .gallery-grid {
     grid-template-columns: 1fr;
   }
-  
+ /* Vehicle Sources Section */
+.vehicle-sources {
+  padding: 5rem 0;
+  background: #f8f9fa;
+  text-align: center;
+}
+
+.sources-intro {
+  max-width: 800px;
+  margin: 0 auto 2rem;
+  color: #555;
+}
+
+.source-grid {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-top: 2rem;
+}
+
+.source-button {
+  display: inline-block;
+  padding: 12px 24px;
+  background: #e60000;
+  color: white;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.source-button:hover {
+  background: #b30000;
+  transform: translateY(-3px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+} 
   .hero-banner {
     height: 60vh;
   }
