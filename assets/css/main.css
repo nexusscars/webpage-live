@@ -488,4 +488,20 @@ h2:after {
   .hero-banner {
     height: 60vh;
   }
+.nexus-footer {
+  background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+  color: white;
+  padding: 40px 0 0;
+  position: relative; /* Ensures footer stays at bottom */
+  z-index: 1; /* Prevents hiding behind other elements */
+  border-top: 4px solid #e60000;
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 0 20px;
 }
