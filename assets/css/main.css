@@ -180,33 +180,69 @@ h2:after {
 }
 
 /* Hero Section */
-.hero-banner {
+ .hero-banner {
+  background: linear-gradient(rgba(0,0,0,0.6), url('/images/hero-car.webp') center/cover no-repeat;
   height: 80vh;
   display: flex;
   justify-content: center;
   align-items: center;
   color: white;
   text-align: center;
-  position: relative;
-  margin-top: 70px;
 }
 
-.hero-banner:before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.5);
+.hero-content h1 {
+  font-size: 4rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  text-shadow: 2px 2px 8px rgba(0,0,0,0.6);
+  margin-bottom: 1.5rem;
+  line-height: 1.2;
 }
 
-.hero-banner h1 {
-  font-size: 3rem;
-  margin-bottom: 1rem;
-  position: relative;
-  z-index: 1;
-  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+.hero-content h1 span {
+  color: #e60000;
+}
+
+.hero-content h2 {
+  font-size: 2rem;
+  font-weight: 600;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.4);
+  margin-bottom: 2.5rem;
+}
+
+.hero-button {
+  background: #e60000;
+  color: white;
+  padding: 15px 30px;
+  border-radius: 50px;
+  font-weight: 700;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
+}
+
+.hero-button:hover {
+  background: #b30000;
+  transform: translateY(-3px);
+}
+
+.hero-button-outline {
+  background: transparent;
+  color: white;
+  padding: 15px 30px;
+  border-radius: 50px;
+  border: 2px solid white;
+  font-weight: 700;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
+}
+
+.hero-button-outline:hover {
+  background: rgba(255,255,255,0.1);
 }
 
 /* Car Gallery */
