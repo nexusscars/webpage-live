@@ -185,4 +185,27 @@ document.addEventListener('DOMContentLoaded', function() {
     modal.addEventListener('click', closeModal);
   }
 })();
+  // Wait for jQuery to be ready
+$(document).ready(function() {
+  try {
+    // Mobile menu toggle
+    $('.mobile-menu-toggle').on('click', function() {
+      $('.primary-nav').toggleClass('active');
+    });
+    
+    // Initialize plugins
+    if(typeof $.fn.scrolly !== 'undefined') {
+      $('.some-element').scrolly();
+    }
+    
+    // Your other code
+  } catch (error) {
+    console.error('Initialization error:', error);
+  }
 });
+
+// Fallback if jQuery fails
+document.addEventListener('DOMContentLoaded', function() {
+  // Non-jQuery alternatives here
+});
+ 
